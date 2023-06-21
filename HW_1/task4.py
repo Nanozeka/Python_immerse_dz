@@ -8,7 +8,7 @@ import random
 
 
 def guess_game(num_attempts):
-    number = random.randint(0, 1000)
+    number = random.randint(0, 100)
 
     # Проходим циклом по длине количества попыток(на каждой итерации количество попыток уменьшается)
     for attempt in range(num_attempts):
@@ -16,7 +16,7 @@ def guess_game(num_attempts):
 
         if guess == number:
             print('Поздравляю, вы угадали число!')
-            return
+
         elif guess < number:
             print('Загаданное число больше вашего.')
         else:
