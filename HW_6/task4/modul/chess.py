@@ -46,7 +46,7 @@ successful_arrangements = []
 count = 0
 
 # В цикле добавляем успешные расстановки
-while count < 4:
+while count < 92:
     queens = random_queen_arrangement()
 
     if queens not in successful_arrangements:
