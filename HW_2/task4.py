@@ -86,5 +86,11 @@ def atm():
             # Счетчик операций обнуляем
             operations_count = 0
 
+            # Вывод списка операций
+            operations_list = []
+            print('Список операций:')
+            for operation in operations_list:
+                print(operation)
+
 
 atm()
