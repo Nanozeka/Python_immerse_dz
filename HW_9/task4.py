@@ -28,6 +28,7 @@ def save_quadratic_equation_results_to_json(func):
     return wrapper
 
 @save_quadratic_equation_results_to_json
+# А, вы по отдельности декорируете? А почему нельзя одновременно?
 def solve_quadratic_equation(a, b, c):
     discriminant = b**2 - 4*a*c
     if discriminant < 0:

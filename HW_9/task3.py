@@ -9,8 +9,12 @@ def run_quadratic_equation_on_csv(func):
             reader = csv.reader(file)
             for row in reader:
                 if len(row) == 3:
+                    # Комментарии учителя
+                    # roots = func(*map(int, row))
                     a, b, c = map(int, row)
                     roots = func(a, b, c)
+
+                    # Согласно условию, нужно было просто вызвать функцию, ничего остального делать не требуется.
                     print(f"Корни квадратного уравнения {a}x^2 + {b}x + {c} = 0: {roots}")
                 else:
                     print("Некорректная тройка чисел в файле.")
@@ -26,10 +30,12 @@ def solve_quadratic_equation(a, b, c):
     elif discriminant == 0:
         x = -b / (2*a)
         return [x]
+    # Так ведь у вас уже определена эта функция в другом файле.
     else:
         x1 = (-b + discriminant**0.5) / (2*a)
         x2 = (-b - discriminant**0.5) / (2*a)
         return [x1, x2]
+
 
 
 if __name__ == '__main__':
