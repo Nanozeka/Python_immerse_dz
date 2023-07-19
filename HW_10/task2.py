@@ -38,6 +38,10 @@ class DirectoryTraverser:
                 'parent_directory': os.path.dirname(root),
                 'size': current_dir_size
             })
+            # Comment on lines +29 to +40
+            # @samodurOFF samodurOFF 4 hours ago
+            # У вас тут повторение в виде добавления одинакового словаря, значения только разные.
+            # Попробуйте разделить этот метод на несколько.
 
     # Записываем результаты в файлы JSON, CSV и pickle
     def save_results(self):
@@ -50,6 +54,9 @@ class DirectoryTraverser:
             writer = csv.DictWriter(csv_file, fieldnames=['type', 'name', 'parent_directory', 'size'])
             writer.writeheader()
             writer.writerows(self.result)
+            # Comment on lines +43 to +56
+            # @samodurOFF samodurOFF 4 hours ago
+            # Аналогично
 
         # Сохранение результатов в файл pickle
         with open('result.pickle', 'wb') as pickle_file:
